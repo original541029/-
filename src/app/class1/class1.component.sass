@@ -1,0 +1,67 @@
+@import "../../stylings/media.scss"
+@import "../../stylings/_variable.scss"
+.font-PingFang
+  font-family: 'PingFang TC, Medium';
+.font-Helvetica
+  font-family: Helvetica Neue, Regular
+ul
+  list-style-type: none
+  margin: 0
+  padding: 0
+[class*="col-"] 
+  padding: 15px;
+@include sm
+  [class*="col-"] 
+    max-width: calc(100% / 2)
+    flex: 0 0 calc(100% / 2)
+@include xs 
+  [class*="col-"] 
+    max-width: 100%
+    flex: 0 0 100%
+.font-56
+  font-size : 56px
+.font-24
+  font-size：24px
+.font-128
+  font-size: 128px
+.incline-line
+  width: 100%;
+  height: 1px;
+  background-color: $green;
+.color-green
+  color: $green;
+.text-center
+   text-align: center;
+.w-6
+  width: 6vw;
+.w-7
+  width: 7vw;
+.list-area
+  
+.bg-white
+  background-color: white
+.list-group
+  border-radius: 100px 0px 30px 0px;
+  box-shadow: 1px 1px 8px #CCC;
+.list-title
+    margin: 0;
+    line-height: 106px;
+    text-shadow: 4px 3px 0.2px rgba(138, 121, 121, 0.2);
+.line-height-0
+  line-height: 0;
+.d-inline-block
+  display: inline-block;
+.text-center
+  text-align: center;
+.h-366
+  height: 366px;
+.list-p
+    line-height: 34px;
+    margin-top: 0;
+    margin-bottom: 0;
+.list-content
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: $green
+  padding: 52px

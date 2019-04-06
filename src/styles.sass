@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/earlyaccess/notosanstc.css")
+@import url("https://fonts.googleapis.com/css?family=Work+Sans")
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons")
+@import url("https://use.fontawesome.com/releases/v5.7.1/css/all.css")
+@import "./stylings/grid.scss"
+@import "./stylings/mixin.scss"
+@import "./stylings/media.scss"
+
+* 
+  box-sizing: border-box;
+.row
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+   
+html,body
+    margin: 0
+    padding: 0
+
+// 自訂 scroll bar
+.cusBar::-webkit-scrollbar-track
+    background: black
+.cusBar::-webkit-scrollbar
+    width: 10px
+    background-color: transparent
+.cusBar::-webkit-scrollbar-thumb
+    background-color: #1d1d1d
+
+// 下面區塊
+.section-detail
+    [_nghost-c2]
+        > *
+            margin:  0
+            padding: 0
+            height: calc(100vh - 49px)
+            width: 100vw
+            overflow: hidden
+            overflow-y: auto
+            line-height: 22px
+            letter-spacing: .8px
+            font-family: 'Work Sans', sans-serif
+        > *::-webkit-scrollbar-track
+            background: black
+        > *::-webkit-scrollbar
+            width: 10px
+            background-color: transparent
+        > *::-webkit-scrollbar-thumb
+            background-color: #1d1d1d

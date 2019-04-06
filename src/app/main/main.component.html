@@ -1,0 +1,62 @@
+<div class="main-container">
+  <div [className]="!openWin ? 'main-window' : 'main-window active'" (click)="changeStatus($event)">
+    <div class="main-box" (click)="$event.stopPropagation()">
+      <a href="" (click)="changeStatus($event)" class="closeBtn material-icons">clear</a>
+      <div class="profile">
+        <div class="photo" [ngStyle]="{'background-image': 'url(' + selectData.photo + ')'}">
+          <img [src]="selectData.photo" alt="">
+        </div>
+        <div class="text">
+            <div class="text-item">
+              {{selectData.name}}
+              <small>{{selectData.job}}</small>
+            </div>
+            <div class="social">
+              <a *ngFor="let row of selectData.social" [href]="row" target="new"></a>
+            </div>
+        </div><!-- text end -->
+        <div class="detail" [innerHTML]="selectData.detail"></div>
+      </div>
+    </div>
+  </div><!-- window end -->
+  <div class="coverPhoto">
+    <img src="https://udemy-images.udemy.com/course/750x422/2165164_de7e.jpg" alt="">
+  </div><!-- cover photo end -->
+  <div class="main-content cusBar">
+    <div class="item">
+      <div class="unit-title">
+        JavaScript 題目篇 - 新手 JS 地下城
+        <div class="teacher">
+          <div class="teacher-title">講師群</div>
+          <a class="teacher-item" *ngFor="let row of teacherData" (click)="changeStatus($event); setDataWin(row)">
+            <img [src]="row.photo" alt="">
+          </a>
+        </div><!-- teacher end -->
+      </div>
+    </div><!-- item end -->
+    <div class="item">
+      <div class="item-th">關於此課程</div>
+      <div class="item-td">
+        六角學院於西元 2019/1/13 徵召超過千位勇者加入百萬年薪遠征團，洧杰校長為了讓大家在踏入旅程前有練功的機會，決定在營地裡打造試煉地下城。<br/>
+        首位攻略魔王的勇者，將會把殊榮記錄在「前端之碑」上。<br/>
+        <div class="item-box">
+          這門課程將會教會你：
+          <ol>
+            <li>如何尋找適合練功的 JS 題目</li>
+            <li>透過學員彼此之間的範例程式碼，讓你對 JS 應用融會貫通</li>
+            <li>教你透過社群，尋找適合的練功夥伴</li>
+            <li>搜尋網路上的程式範例，尋找自己看得懂的程式碼，並提升自己的 JS 程式脈絡</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- item end -->
+    <div class="item">
+      <div class="item-th">課程連結</div>
+      <div class="item-td">
+        <a target="new" href="https://www.udemy.com/js-underground/learn/v4/overview">
+          https://www.udemy.com/js-underground/learn/v4/overview
+        </a>
+      </div>
+    </div><!-- item end -->
+  </div><!-- content end -->
+</div>
